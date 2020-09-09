@@ -57,7 +57,7 @@ function Update-AzModule {
         Write-Debug "Time Elapsed: ${totalSeconds}s"
 
         if($allToUpdate) {
-            Write-Host -ForegroundColor DarkGreen "The modules to Upddate:$($allToUpdate | Out-String)"
+            Write-Host -ForegroundColor DarkGreen "The modules to update:$($allToUpdate | Out-String)"
 
             $allToUpdateReordered = @() + $allToUpdate.Where({$_.Name -eq "Az"})
             $allToUpdateReordered += $allToUpdate.Where({$_.Name -ne "Az" -and $_.Name -ne "Az.Accounts"})
